@@ -1,30 +1,16 @@
 import './App.css';
-import { useState } from 'react';
-
-function getrandomLetter() { 
-  const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" ];
-  let num = Math.floor(Math.random() *26 );
-  return letters[num];
-}
-
-function InputBox() { 
-  const [wordInput, setwordInput] = useState(''); 
-  const handleinput = (event) => {
-    setwordInput(event.target.value); 
-  };
-  return ( 
-    <input type="text" value={wordInput} onChange={handleinput} ></input>
-  )
-}
+import InputBox from './components/InputBox';
+import LetterBank from './components/LetterBank'
 
 function App() {
   return (
     <header>
+      <div>
+      Letter Bank: 
+      <LetterBank></LetterBank>
+      </div> 
       <p> Enter Word: </p>
       <InputBox></InputBox>
-      <div>
-      {getrandomLetter()}
-      </div> 
     </header>
   );
 }
