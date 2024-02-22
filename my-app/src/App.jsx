@@ -1,6 +1,7 @@
 import './App.css';
 import InputBox from './components/InputBox';
 import LetterBank from './components/LetterBank'
+import Timer from './components/Timer'
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <LetterBank></LetterBank>
       </div> 
       <p> Enter Word: </p>
-      <InputBox></InputBox>
+      <InputBox></InputBox> 
+      <Timer></Timer>
     </header>
   );
 }
