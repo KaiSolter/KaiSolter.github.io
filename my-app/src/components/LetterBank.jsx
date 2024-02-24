@@ -6,7 +6,7 @@ function getrandomLetter() {
   return letters[n];
 }
 
-function LetterBank() {
+function LetterBank( { onLettersUpdate } ) {
   const [letterBank, setLetterBank] = useState([]);
 
   useEffect(() => {
@@ -18,7 +18,8 @@ function LetterBank() {
       }
     }
     setLetterBank(l);
-  }, []); 
+    onLettersUpdate(l);
+  }, [onLettersUpdate]); 
 
   return (
     <div>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 
 
-function InputBox() { 
+function InputBox( {letterBank} ) { 
   const [wordInput, setwordInput] = useState(''); 
   const handleinput = (event) => {
     setwordInput(event.target.value); 
@@ -15,7 +15,19 @@ function InputBox() {
   };
 
   function verifyWord(word) {
-    
+    let valid = true
+    const capsWord = word.toUpperCase();
+    for ( let reqchar in letterBank  ) {
+      if(!capsWord.includes(reqchar)){ 
+        valid = false
+      }
+    }
+    if (valid) {
+      alert('valid word')
+    }
+    else {
+      alert('invalid word')
+    }
     setwordInput('')
 
 }
