@@ -18,12 +18,12 @@ function InputBox( {letterBank} ) {
     let valid = true
     const capsWord = word.toUpperCase();
     for ( let reqchar in letterBank  ) {
-      if(!capsWord.includes(reqchar)){ 
+      if(!capsWord.includes(letterBank[reqchar])){ 
         valid = false
       }
     }
     if (valid) {
-      alert('valid word')
+      alert('valid word' )
     }
     else {
       alert('invalid word')
