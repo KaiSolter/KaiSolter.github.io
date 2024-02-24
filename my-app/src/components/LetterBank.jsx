@@ -8,11 +8,16 @@ function getrandomLetter() {
 
 function LetterBank( { onLettersUpdate } ) {
   const [letterBank, setLetterBank] = useState([]);
+  const hardletters = ["J", "X", "Q", "Z"];
 
   useEffect(() => {
     let l = [];
+    let numHardLetters = 0
     while (l.length < 3) {
       let letter = getrandomLetter();
+      if (hardletters.includes(letter) && numHardLetters > 0 ) {
+        continue
+      }
       if (!l.includes(letter)) {
         l.push(letter);
       }
