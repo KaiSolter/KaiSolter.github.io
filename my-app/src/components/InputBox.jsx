@@ -14,22 +14,49 @@ function InputBox( {letterBank} ) {
     }
   };
 
+  async function fetchDef(word) {
+    try {
+      const dictUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+      const response = await fetch(dictUrl); 
+      if (!response.ok && response.status === 404) {
+        return false;
+      }
+      if (!response.ok) {
+        throw new Error('Network request failed');
+      }
+      const entries = await response.json();
+      return entries.length > 0;
+    } catch (e) {
+      console.error('There was a problem with your fetch operation:', e);
+      throw e; 
+    }
+  }
+
   function verifyWord(word) {
-    let valid = true
+    let validLetters = true
     const capsWord = word.toUpperCase();
     for ( let reqchar in letterBank  ) {
       if(!capsWord.includes(letterBank[reqchar])){ 
-        valid = false
+        validLetters = false
       }
     }
-    if (valid) {
-      alert('valid word' )
+    if (validLetters) {
+      fetchDef(word).then(validEngWord => {
+        if (validEngWord) {
+          alert('valid word');
+        } else {
+          alert('invalid word');
+        }
+        setwordInput('');
+      }).catch(error => {
+        console.error('Error fetching definition:', error);
+        alert('Error checking word validity');
+        setwordInput('');
+      });
+    } else {
+      alert('invalid word');
+      setwordInput('');
     }
-    else {
-      alert('invalid word')
-    }
-    setwordInput('')
-
 }
 
   return ( 
