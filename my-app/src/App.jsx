@@ -9,6 +9,7 @@ function App() {
   const [sharedLetterBank, setSharedLetterBank] = useState([])
   const [key, setKey] = useState(0)
   const [score, setScore] = useState(0)
+  const [bestScore, setBestScore] = useState(0)
   const [timeKey, setTimeKey] = useState(0)
 
   const regenerateLetterBank = useCallback( () => {
@@ -25,7 +26,11 @@ function App() {
 
   const resetTimer = useCallback( () => {
     setTimeKey(prevTimeKey => prevTimeKey + 1);
-  })
+  },[])
+
+  const updateBestScore = useCallback ( (currentScore) => {
+    
+  }, [])
 
   return (
     <header>
@@ -41,11 +46,11 @@ function App() {
       ></InputBox> 
       <Timer 
       resetScore={resetScore}
+      updateBestScore={updateBestScore}
       onRegenerateLetterBank={regenerateLetterBank} 
       timeKey={timeKey}
        ></Timer>
-      <p>Streak:</p>
-      <Score score={score} ></Score>
+      <Score score={score} bestScore={bestScore} ></Score>
     </header>
   );
 }

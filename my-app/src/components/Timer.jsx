@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Timer( {resetScore, onRegenerateLetterBank, timeKey}) {
+function Timer( {resetScore, updateBestScore, onRegenerateLetterBank, timeKey}) {
   const [count, setCount] = useState(15);
 
   useEffect(() => {
@@ -16,6 +16,7 @@ function Timer( {resetScore, onRegenerateLetterBank, timeKey}) {
     if (count === 0) {
       onRegenerateLetterBank();
       resetScore();
+      updateBestScore();
       setCount(15); 
     }
   }, [count, onRegenerateLetterBank, resetScore]);
