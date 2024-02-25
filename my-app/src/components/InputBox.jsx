@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function InputBox( {letterBank, incrementScore, onRegenerateLetterBank} ) { 
+function InputBox( {letterBank, incrementScore, resetTimer, onRegenerateLetterBank} ) { 
   const [wordInput, setwordInput] = useState(''); 
   const handleinput = (event) => {
     setwordInput(event.target.value); 
@@ -42,12 +42,14 @@ function InputBox( {letterBank, incrementScore, onRegenerateLetterBank} ) {
       fetchDef(word).then(validEngWord => {
         if (validEngWord) {
           alert('valid word');
+          resetTimer();
           incrementScore();
+          onRegenerateLetterBank();
         } else {
           alert('invalid word');
         }
         setwordInput('');
-        onRegenerateLetterBank();
+      
       }).catch(error => {
         console.error('Error fetching definition:', error);
         alert('Error checking word validity');
@@ -56,12 +58,11 @@ function InputBox( {letterBank, incrementScore, onRegenerateLetterBank} ) {
     } else {
       alert('invalid word');
       setwordInput('');
-      onRegenerateLetterBank();
     }
 }
 
   return ( 
-    <input type="text" value={wordInput} onChange={handleinput}  onKeyDown={handleKeyDown}  ></input>
+    <input type="text" value={wordInput} onChange={handleinput} onKeyDown={handleKeyDown}  ></input>
   )
 }
 

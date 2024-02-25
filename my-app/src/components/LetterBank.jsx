@@ -8,7 +8,7 @@ function getrandomLetter() {
 
 function LetterBank( { onLettersUpdate } ) {
   const [letterBank, setLetterBank] = useState([]);
-  const hardletters = ["J", "X", "Q", "Z"];
+  const hardletters = ["J", "X", "Q", "Z", "K"];
 
   useEffect(() => {
     let l = [];
