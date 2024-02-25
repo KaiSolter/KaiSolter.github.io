@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function InputBox( {letterBank, onRegenerateLetterBank} ) { 
+function InputBox( {letterBank, incrementScore, onRegenerateLetterBank} ) { 
   const [wordInput, setwordInput] = useState(''); 
   const handleinput = (event) => {
     setwordInput(event.target.value); 
@@ -42,6 +42,7 @@ function InputBox( {letterBank, onRegenerateLetterBank} ) {
       fetchDef(word).then(validEngWord => {
         if (validEngWord) {
           alert('valid word');
+          incrementScore();
         } else {
           alert('invalid word');
         }
