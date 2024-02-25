@@ -18,6 +18,9 @@ function LetterBank( { onLettersUpdate } ) {
       if (hardletters.includes(letter) && numHardLetters > 0 ) {
         continue
       }
+      if (hardletters.includes(letter)) {
+        numHardLetters++;
+      }
       if (!l.includes(letter)) {
         l.push(letter);
       }
