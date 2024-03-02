@@ -25,6 +25,11 @@ function LetterBank( { onLettersUpdate } ) {
       if (!l.includes(letter)) {
         l.push(letter);
       }
+      if (letter = "Q") {
+        if (Math.random() > .7 ) {
+          continue
+        } 
+      }
     }
     setLetterBank(l);
     onLettersUpdate(l);
