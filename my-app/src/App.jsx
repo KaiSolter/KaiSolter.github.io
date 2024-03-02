@@ -33,9 +33,9 @@ function App() {
   }, [])
 
   return (
-    <header>
-      <div>
-      Letter Bank: 
+   
+    <h1 className='Background'>
+      <div classname="Letter-Bank" >
       <LetterBank key={key} onLettersUpdate={setSharedLetterBank} ></LetterBank>
       </div> 
       <p> Enter Word: </p>
@@ -51,7 +51,7 @@ function App() {
       timeKey={timeKey}
        ></Timer>
       <Score score={score} bestScore={bestScore} ></Score>
-    </header>
+    </h1>
   );
 }
 

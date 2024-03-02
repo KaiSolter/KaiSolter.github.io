@@ -1,3 +1,4 @@
+import '../LetterBank.css';
 import { useState, useEffect } from 'react';
 
 function getrandomLetter() {
@@ -30,8 +31,9 @@ function LetterBank( { onLettersUpdate } ) {
   }, [onLettersUpdate]); 
 
   return (
-    <div>
-      <ul>
+    <div className='Letter-Bank' >
+      Letter Bank:
+      <ul className='horizontal-list' >
         {letterBank.map((letter, index) => (
           <li key={index}>{letter}</li>
         ))}
