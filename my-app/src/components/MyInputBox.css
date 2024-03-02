@@ -1,0 +1,26 @@
+.inputContainer {
+  background-color: cadetblue;
+  margin: 20px;
+  padding: 10px;
+  border: 5px solid black;
+  align-items: center;
+  position: absolute;
+  right: 570px;
+  top: 200px;
+}
+
+.MyInputBox {
+    background-color: #17a1fd;
+    box-shadow: 0 4px 8px rgba(0, 101, 119, 0.1);
+    border-radius: 10px;
+    width: 200px; 
+    height: 40px; 
+    font-size: 30px; 
+    padding: 5px 10px; 
+    border: 4px solid rgb(21, 0, 36); 
+    border-radius: 5px; 
+  }
+
+  .MyInputBox:focus {
+    outline: 2px solid #76057a;
+  }

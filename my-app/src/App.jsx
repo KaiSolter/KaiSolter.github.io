@@ -34,11 +34,10 @@ function App() {
 
   return (
    
-    <h1 className='Background'>
-      <div classname="Letter-Bank" >
+    <h1>
+      <div>
       <LetterBank key={key} onLettersUpdate={setSharedLetterBank} ></LetterBank>
       </div> 
-      <p> Enter Word: </p>
       <InputBox letterBank={sharedLetterBank} 
       onRegenerateLetterBank={regenerateLetterBank} 
       incrementScore={incrementScore}

@@ -1,3 +1,4 @@
+import '../Timer.css'
 import React, { useState, useEffect } from 'react';
 
 function Timer( {resetScore, updateBestScore, onRegenerateLetterBank, timeKey}) {
@@ -26,7 +27,7 @@ function Timer( {resetScore, updateBestScore, onRegenerateLetterBank, timeKey}) 
   }, [timeKey]);
 
   return (
-    <div>
+    <div className='myTimer'>
       <p>{count}</p>
     </div>
   );

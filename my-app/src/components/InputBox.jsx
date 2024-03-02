@@ -1,3 +1,4 @@
+import './MyInputBox.css';
 import { useState } from 'react';
 
 function InputBox( {letterBank, incrementScore, resetTimer, onRegenerateLetterBank} ) { 
@@ -62,7 +63,10 @@ function InputBox( {letterBank, incrementScore, resetTimer, onRegenerateLetterBa
 }
 
   return ( 
-    <input type="text" value={wordInput} onChange={handleinput} onKeyDown={handleKeyDown}  ></input>
+    <div className='inputContainer' > 
+     Enter Word:
+    <input className='MyInputBox' type="text" value={wordInput} onChange={handleinput} onKeyDown={handleKeyDown} ></input>
+    </div>
   )
 }
 
