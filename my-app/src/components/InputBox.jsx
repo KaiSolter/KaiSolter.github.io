@@ -64,7 +64,7 @@ function InputBox( {letterBank, incrementScore, resetTimer, onRegenerateLetterBa
 
   return ( 
     <div className='inputContainer' > 
-     Enter Word:
+    <h3> Enter Word: </h3>
     <input className='MyInputBox' type="text" value={wordInput} onChange={handleinput} onKeyDown={handleKeyDown} ></input>
     </div>
   )

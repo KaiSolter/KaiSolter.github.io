@@ -12,6 +12,9 @@ html, body {
 
 body {
   background: linear-gradient(to bottom, #738a71, #d8f5c4);
+  display: flex;
+  flex: 1;
+  justify-content: center;
 }
 
 .wrapper {

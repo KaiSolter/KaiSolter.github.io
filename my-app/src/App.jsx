@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useCallback, useState} from 'react'
+import React, {useCallback, useState, useEffect} from 'react'
 import InputBox from './components/InputBox'
 import LetterBank from './components/LetterBank'
 import Timer from './components/Timer'
@@ -11,6 +11,10 @@ function App() {
   const [score, setScore] = useState(0)
   const [bestScore, setBestScore] = useState(0)
   const [timeKey, setTimeKey] = useState(0)
+
+  useEffect(() => {
+    document.title = "Word Game"
+  }, [])
 
   const regenerateLetterBank = useCallback( () => {
     setKey(prevKey => prevKey + 1);
@@ -33,7 +37,6 @@ function App() {
   }, [score, bestScore, setBestScore])
 
   return (
-   
     <h1>
       <div className='wrapper' >
       <Score score={score} bestScore={bestScore} />
