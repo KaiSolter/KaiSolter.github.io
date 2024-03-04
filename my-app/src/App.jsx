@@ -28,28 +28,30 @@ function App() {
     setTimeKey(prevTimeKey => prevTimeKey + 1);
   },[])
 
-  const updateBestScore = useCallback ( (currentScore) => {
-    
-  }, [])
+  const updateBestScore = useCallback ( () => {
+    if (score > bestScore ) { setBestScore(score) } 
+  }, [score, bestScore, setBestScore])
 
   return (
    
     <h1>
-      <div>
-      <LetterBank key={key} onLettersUpdate={setSharedLetterBank} ></LetterBank>
-      </div> 
+      <div className='wrapper' >
+      <Score score={score} bestScore={bestScore} />
+      <div className='wrapper2'>
+      <LetterBank key={key} onLettersUpdate={setSharedLetterBank} />
       <InputBox letterBank={sharedLetterBank} 
       onRegenerateLetterBank={regenerateLetterBank} 
       incrementScore={incrementScore}
       resetTimer={resetTimer}
       ></InputBox> 
+      </div>
       <Timer 
       resetScore={resetScore}
       updateBestScore={updateBestScore}
       onRegenerateLetterBank={regenerateLetterBank} 
       timeKey={timeKey}
-       ></Timer>
-      <Score score={score} bestScore={bestScore} ></Score>
+       />
+      </div>
     </h1>
   );
 }

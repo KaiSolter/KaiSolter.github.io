@@ -13,3 +13,21 @@ html, body {
 body {
   background: linear-gradient(to bottom, #738a71, #d8f5c4);
 }
+
+.wrapper {
+  max-width: 1000px;
+  padding: 8px;
+  background-color: blueviolet;
+  border: 5px solid black;
+  display: flex;
+  flex: 1; 
+  flex-direction: row;
+}
+
+.wrapper2 {
+  display: flex;
+  flex: 1; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

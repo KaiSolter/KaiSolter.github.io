@@ -22,18 +22,18 @@ function LetterBank( { onLettersUpdate } ) {
       if (hardletters.includes(letter)) {
         numHardLetters++;
       }
-      if (!l.includes(letter)) {
-        l.push(letter);
-      }
-      if (letter = "Q") {
+      if (letter == "Q") {
         if (Math.random() > .7 ) {
           continue
         } 
       }
+      if (!l.includes(letter)) {
+        l.push(letter);
+      }
     }
     setLetterBank(l);
     onLettersUpdate(l);
-  }, [onLettersUpdate]); 
+  }, [onLettersUpdate, setLetterBank]); 
 
   return (
     <div className='Letter-Bank' >

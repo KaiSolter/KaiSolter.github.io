@@ -20,7 +20,7 @@ function Timer( {resetScore, updateBestScore, onRegenerateLetterBank, timeKey}) 
       updateBestScore();
       setCount(15); 
     }
-  }, [count, onRegenerateLetterBank, resetScore]);
+  }, [count, onRegenerateLetterBank, resetScore, updateBestScore]);
   
   useEffect(() => {
     setCount(15); 
