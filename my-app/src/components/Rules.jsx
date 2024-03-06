@@ -10,6 +10,8 @@ function Rules() {
     <p> You may use as many additional letters as you'd like but you must use every given letter </p>
     <p> Proper nouns do not count</p>
     <p> You have 15 seconds per guess, if you cannot enter a valid answer before the timer reaches 0 you lose</p>
+    <p>"J", "X", "Q", "Z", "K", "V", "W" are all considered hard letters, there is a maximun of 1 hard letter in each letter bank</p>
+    <p>The letter Q has a further decreased probability</p>
     </div>
     )
 }
