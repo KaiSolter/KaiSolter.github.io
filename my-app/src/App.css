@@ -34,3 +34,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.rulesWrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}

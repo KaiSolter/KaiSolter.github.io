@@ -4,6 +4,7 @@ import InputBox from './components/InputBox'
 import LetterBank from './components/LetterBank'
 import Timer from './components/Timer'
 import Score from './components/Score'
+import Rules from './components/Rules'
 
 function App() {
   const [sharedLetterBank, setSharedLetterBank] = useState([])
@@ -54,6 +55,9 @@ function App() {
       onRegenerateLetterBank={regenerateLetterBank} 
       timeKey={timeKey}
        />
+      </div>
+      <div className='rulesWrapper'> 
+      <Rules/>
       </div>
     </h1>
   );
