@@ -1,42 +1,6 @@
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  background: linear-gradient(to bottom, #738a71, #d8f5c4);
+  background: #36b2e4;
   display: flex;
   flex: 1;
   justify-content: center;
-}
-
-.wrapper {
-  max-width: 1000px;
-  padding: 8px;
-  background-color: blueviolet;
-  border: 5px solid black;
-  display: flex;
-  flex: 1; 
-  flex-direction: row;
-}
-
-.wrapper2 {
-  display: flex;
-  flex: 1; 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.rulesWrapper {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
 }
