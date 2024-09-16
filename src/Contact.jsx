@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import './Contacts.css';
+import './General.css'
 
+
+//page works but could use better styling
 function Contacts() {
     const [formData, setFormData] = useState({
         name: '',
@@ -9,7 +12,6 @@ function Contacts() {
         message: '',
     });
 
-    const [isSubmitted, setIsSubmitted] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [isModalOpen, setIsModalOpen] = useState(false);
     const handleChange = (e) => {
@@ -22,7 +24,6 @@ function Contacts() {
         emailjs.send('service_gpwk94t', 'template_x4vh4gj', formData, 'acqC_i250ED-NdGyO')
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
-                setIsSubmitted(true);
                 setIsModalOpen(true);
             })
             .catch((err) => {
@@ -36,8 +37,8 @@ function Contacts() {
     };
 
     return (
-        <div className="contact-container">
-            <h1 className="heading">Contact Me!</h1>
+        <div className="container">
+            <h1 className="black-text">Contact Me!</h1>
             <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-group">
                     <label htmlFor="name" className="label">Name:</label>

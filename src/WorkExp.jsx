@@ -40,4 +40,4 @@ function WorkExp() {
     );
 }
 
-export default WorkExp;
+export default WorkExp

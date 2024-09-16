@@ -11,13 +11,16 @@ const NavBar = () => {
                         <Link to="/" className="text-white">About Me</Link>
                     </li>
                     <li>
-                        <Link to="/WorkExp" className="text-white">Work Experience</Link>
+                        <Link to="/work-experience" className="text-white">Work Experience</Link>
                     </li>
                     <li>
-                        <Link to="/Projects" className="text-white">Projects</Link>
+                        <Link to="/projects" className="text-white">Projects</Link>
                     </li>
                     <li>
-                        <Link to="/Contacts" className="text-white">Contact Information</Link>
+                        <Link to="/contact" className="text-white">Contact Information</Link>
+                    </li>
+                    <li>
+                        <Link to="/assignments" className="text-white">Assignments</Link>
                     </li>
 
                 </ul>

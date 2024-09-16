@@ -6,6 +6,7 @@ import Home from './Home';
 import WorkExp from './WorkExp';
 import Projects from './Projects';
 import Contacts from './Contact';
+import Assignments from './Assignments';
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
         <div className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/WorkExp" element={<WorkExp />} />
-            <Route path="/Projects" element={<Projects />} />
-            <Route path="/Contacts" element={<Contacts />} />
+            <Route path="/work-experience" element={<WorkExp />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contacts />} />
+            <Route path="/assignments" element={<Assignments />} />
           </Routes>
         </div>
       </div>
