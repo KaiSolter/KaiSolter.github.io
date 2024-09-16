@@ -10,7 +10,7 @@ function Assignments() {
                 <h1 className='black-text-sm'>Assignment 0</h1>
                 <div className='github-button-container' >
                     <a
-                        href="https://github.com/KaiSolter"
+                        href="https://github.com/KaiSolter/bu_kaisolter-assignment-0"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="github-button"
