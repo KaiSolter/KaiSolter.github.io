@@ -1,0 +1,52 @@
+/*NavBar.css */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: center;
+    background-color: #1f2937;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    /* Remove bullet points */
+    display: flex;
+    gap: 1rem;
+    /* Space between links */
+}
+
+.navbar a {
+    text-decoration: none;
+    /* Remove underline */
+    color: #ffffff;
+    /* White text color */
+    font-weight: 500;
+    /* Medium font weight */
+    padding: 0.5rem 1rem;
+    /* Padding around the links */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth hover transition */
+}
+
+.navbar a:hover {
+    background-color: #4b5563;
+    /* Slightly lighter background on hover */
+    border-radius: 0.375rem;
+    /* Rounded corners on hover */
+    color: #e5e7eb;
+    /* Light gray text color on hover */
+}
+
+/* Adjust content below the fixed navbar */
+.main-content {
+    padding-top: 4rem;
+    /* Add padding to avoid content being hidden under the navbar */
+}
