@@ -1,5 +1,6 @@
 import React from 'react';
 import './WorkExp.css';
+import './General.css';
 
 function WorkExp() {
     return (
