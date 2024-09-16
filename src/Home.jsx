@@ -6,7 +6,7 @@ function Home() {
         <div className="container">
             <h1 className="black-text">
                 Kai Solter
-            </h1>a
+            </h1>
             <div className="job">
                 <p>
                     Hello! My name is Kai Solter. I am currently a 3rd year computer science student at Boston University
