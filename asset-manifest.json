@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/kaisolter.github.io/static/css/main.43e139f3.css",
+    "main.js": "/kaisolter.github.io/static/js/main.19ef0ea5.js",
+    "index.html": "/kaisolter.github.io/index.html",
+    "main.43e139f3.css.map": "/kaisolter.github.io/static/css/main.43e139f3.css.map",
+    "main.19ef0ea5.js.map": "/kaisolter.github.io/static/js/main.19ef0ea5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43e139f3.css",
+    "static/js/main.19ef0ea5.js"
+  ]
+}
