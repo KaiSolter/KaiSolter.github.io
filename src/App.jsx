@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './NavBar';
 import Home from './Home';
 import WorkExp from './WorkExp';
@@ -11,7 +11,7 @@ import Assignments from './Assignments';
 function App() {
   return (
 
-    <BrowserRouter>
+    <HashRouter>
       <div>
         <NavBar />
         <div className="main-content">
@@ -24,7 +24,7 @@ function App() {
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
