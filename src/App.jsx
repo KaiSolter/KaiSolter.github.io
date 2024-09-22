@@ -1,17 +1,18 @@
 import './App.css';
 import React from 'react';
-import { StaticRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './NavBar';
 import Home from './Home';
 import WorkExp from './WorkExp';
 import Projects from './Projects';
 import Contacts from './Contact';
 import Assignments from './Assignments';
+import NotFound from './NotFound';
 
 function App() {
   return (
 
-    <StaticRouter>
+    <BrowserRouter >
       <div>
         <NavBar />
         <div className="main-content">
@@ -21,10 +22,11 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contacts />} />
             <Route path="/assignments" element={<Assignments />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </div>
-    </StaticRouter>
+    </BrowserRouter >
   );
 };
 
