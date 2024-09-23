@@ -11,7 +11,7 @@ import NotFound from './NotFound';
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL} >
+    <BrowserRouter basename={'https://kaisolter.github.io'} >
       <div>
         <NavBar />
         <div className="main-content">
