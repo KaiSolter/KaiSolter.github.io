@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import NavBar from './NavBar';
 import Home from './Home';
 import WorkExp from './WorkExp';
@@ -11,7 +11,7 @@ import NotFound from './NotFound';
 
 function App() {
   return (
-    <BrowserRouter basename={'/'} >
+    <HashRouter >
       <div>
         <NavBar />
         <div className="main-content">
@@ -25,7 +25,7 @@ function App() {
           </Routes>
         </div>
       </div>
-    </BrowserRouter >
+    </HashRouter >
   );
 };
 
