@@ -11,8 +11,7 @@ import NotFound from './NotFound';
 
 function App() {
   return (
-
-    <BrowserRouter >
+    <BrowserRouter basename={process.env.PUBLIC_URL} >
       <div>
         <NavBar />
         <div className="main-content">
