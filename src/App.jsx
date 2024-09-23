@@ -11,7 +11,7 @@ import NotFound from './NotFound';
 
 function App() {
   return (
-    <BrowserRouter basename={'https://kaisolter.github.io'} >
+    <BrowserRouter basename={'/'} >
       <div>
         <NavBar />
         <div className="main-content">
