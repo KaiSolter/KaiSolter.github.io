@@ -55,7 +55,6 @@ function Assignments() {
                             Demo Video
                         </a>
 
-                        
                     </div>
                 </div>
                     <div className="job">
@@ -147,6 +146,30 @@ function Assignments() {
                     <div className='github-button-container'>
                         <a
                             href="https://youtu.be/Lekg7s4z1_0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="github-button"
+                        >
+                            Demo Video
+                        </a>
+
+                    </div>
+                </div>
+                <div className="job">
+                    <h1 className='black-text-sm'>Assignment 8</h1>
+                    <div className='github-button-container' >
+                        <a
+                            href="https://github.com/KaiSolter/bu_kaisolter-assignment-8"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="github-button"
+                        >
+                            Github Link
+                        </a>
+                    </div>
+                    <div className='github-button-container'>
+                        <a
+                            href="https://youtu.be/9Hvg1BG3e3w"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="github-button"
